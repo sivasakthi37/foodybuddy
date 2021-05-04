@@ -1,5 +1,6 @@
 var moment = require("moment");
 
+// sample input
 const input = [
   { date: "2020-01-01", plan: "gold", action: "start" },
   { date: "2020-01-10", plan: "gold", action: "stop" },
@@ -13,13 +14,15 @@ const input = [
   { date: "2020-03-20", plan: "gold", action: "stop" }
 ];
 
+
+// plans with index and price
 const plans = {
   bronze: { index: 3, price: 10 },
   silver: { index: 2, price: 20 },
   gold: { index: 1, price: 30 }
 };
 
-//print the result
+//print the final result
 function print(startdate, stopdate, plan, difference) {
   let startDate = moment(startdate).format("DD MMM");
   let endDate = moment(stopdate).format("DD MMM");
@@ -28,6 +31,8 @@ function print(startdate, stopdate, plan, difference) {
   console.log(data);
 }
 
+
+//calculations
 input.forEach((value, index) => {
   const start = value;
   const stop = input[index + 1];
