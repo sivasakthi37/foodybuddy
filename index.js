@@ -59,4 +59,3 @@ input.forEach((value, index) => {
   }
 });
 
-// console.log("welcome to my project", input)
